@@ -8,6 +8,17 @@
   </head>
   <body>    
     <script>
+        const inputnum = prompt('Please enter a number')
+        const inputpercentage = prompt('Please enter a number')
+        percentageCalculator = (inputnum, inputpercentage) => {
+          if (+inputnum && +inputpercentage) {
+          return inputnum * inputpercentage / 100;
+    
+        } else {
+          return 'something is wrong, check your input'
+        }
+    }
+        console.log(percentageCalculator(100, 20))
 
     </script>
   </body>
