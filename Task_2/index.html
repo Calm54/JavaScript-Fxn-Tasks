@@ -8,6 +8,37 @@
   </head>
   <body>    
     <script>
+       const arrSize = ['small', 'medium', 'large'];
+      const arrFlavour = ['cola', 'lemon', 'orange'];
+      const inputSize = prompt('Please enter a Size')
+      const inputFlavour = prompt('Please enter a Flavour')
+  drinkOrder = (size, drink) => {
+      let drinkLabel;
+  
+      console.log(inputSize, inputFlavour)
+  
+      if (!(arrSize.find((a) => a.toLowerCase() === inputSize.toLowerCase()))) {
+          alert ('This is not a correct Size')
+      } else if (!(arrFlavour.find((f) => f.toLowerCase() === inputFlavour.toLowerCase()))) {
+          alert('This is not a correct Flavour')
+      } else {
+          switch (drink) {
+          case 'lemon' :
+              drinkLabel = 'lemonade';
+              break;
+          case 'orange':
+              drinkLabel = 'orangeade';
+              break;
+          default:
+              drinkLabel = drink;
+              break;        
+          }    
+  
+      }
+      return 'You have ordered a ${size} ${drinklabel}';
+  }
+  
+  console.log(drinkOrder('inputSize', 'inputFlavour'));
 
     </script>
   </body>
